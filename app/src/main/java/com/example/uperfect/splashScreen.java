@@ -1,11 +1,11 @@
 package com.example.uperfect;
 
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 
 public class splashScreen extends AppCompatActivity {
     private static int wait = 2000;
@@ -21,10 +21,21 @@ public class splashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(splashScreen.this,intro1.class);
-                startActivity(intent);
-                finish();
+
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                boolean previouslyStarted = prefs.getBoolean("isFirstTime", false);
+                if (!previouslyStarted) {
+                    SharedPreferences.Editor edit = prefs.edit();
+                    edit.putBoolean("isFirstTime", Boolean.TRUE);
+                    edit.apply();
+                    Intent intent = new Intent(splashScreen.this, intro1.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    startActivity(new Intent(splashScreen.this, webView.class));
+                    finish();
+                }
             }
-        },wait);
+        }, wait);
     }
 }

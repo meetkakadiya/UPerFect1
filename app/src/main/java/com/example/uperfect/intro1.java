@@ -26,9 +26,6 @@ public class intro1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =  new Intent(intro1.this,intro2.class);
                 startActivity(intent);
-
-
-
             }
         });
         overridePendingTransition(0, 0);
