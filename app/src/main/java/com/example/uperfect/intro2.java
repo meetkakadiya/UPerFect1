@@ -4,16 +4,18 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class intro2 extends AppCompatActivity {
-    private ImageView imgbtn2;
+    private Button imgbtn2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro2);
 
-        imgbtn2 = (ImageView) findViewById(R.id.imgbtn2);
+        imgbtn2 = (Button) findViewById(R.id.imgbtn2);
         imgbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

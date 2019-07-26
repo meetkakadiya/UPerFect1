@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class intro3 extends AppCompatActivity {
 
-    private ImageView imgbtn3;
+    private Button imgbtn3;
 
 
     @Override
@@ -16,7 +18,7 @@ public class intro3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro3);
 
-        imgbtn3 =(ImageView) findViewById(R.id.imgbtn3);
+        imgbtn3 =(Button) findViewById(R.id.imgbtn3);
 //        imgbtn3.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -30,7 +32,7 @@ public class intro3 extends AppCompatActivity {
     }
 
     public void clickhere(View view) {
-        Intent intent = new Intent(this,webView.class);
+        Intent intent = new Intent( intro3.this,webView.class);
         startActivity(intent);
 
     }
