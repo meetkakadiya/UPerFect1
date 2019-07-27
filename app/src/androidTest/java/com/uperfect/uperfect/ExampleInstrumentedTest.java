@@ -1,4 +1,4 @@
-package com.example.uperfect;
+package com.uperfect.uperfect;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
