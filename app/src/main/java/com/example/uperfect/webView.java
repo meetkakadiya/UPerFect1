@@ -30,22 +30,5 @@ public class webView extends AppCompatActivity {
         webView.loadUrl("https://uperfect.in/");
     }
 
-//    @Override
-//    public void onBackPressed() {
-//
-//
-//        if(backPressedTime + 2000 >System.currentTimeMillis()){
-//            backToast.cancel();
-//            super.onBackPressed();
-//            return;
-//        }else{
-//           backToast =  Toast.makeText(getBaseContext(),"Press Back Again to Exit",Toast.LENGTH_SHORT);
-//            backToast.show();
-//        }
-//
-//
-//        backPressedTime =System.currentTimeMillis();
 
-
-    //}
 }

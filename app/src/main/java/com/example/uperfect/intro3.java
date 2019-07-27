@@ -35,5 +35,6 @@ public class intro3 extends AppCompatActivity {
         Intent intent = new Intent( intro3.this,webView.class);
         startActivity(intent);
 
+
     }
 }
